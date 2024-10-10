@@ -1,9 +1,9 @@
 package com.thered.stocksignal.service;
 
-import com.thered.stocksignal.apiPayload.ApiResponse;
 import com.thered.stocksignal.app.dto.MyBalanceDto;
 import com.thered.stocksignal.domain.entity.UserStock;
 import com.thered.stocksignal.repository.UserStockRepository;
+import com.thered.stocksignal.service.myBalance.MyBalanceService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +29,10 @@ public class MyBalanceServiceTest {
         String appKey = "앱키";
         String appSecret = "앱시크릿";
 
-        ApiResponse<MyBalanceDto> result = myBalanceService.getMyBalance(accountNumber, accessToken, appKey, appSecret);
+        MyBalanceDto.MyBalanceResponseDto result = myBalanceService.getMyBalance(accountNumber, accessToken, appKey, appSecret);
         assertNotNull(result);
 
-        System.out.println(result.getData().toString());
+        System.out.println(result);
     }
 
     @Test
@@ -42,11 +42,11 @@ public class MyBalanceServiceTest {
 
         myBalanceService.updateUserStock(1L,null,1L,1L);
 
-        UserStock userStock = userStockRepository.findByUserIdAndStockId(1L, 1L);
+        UserStock userStock = userStockRepository.findByUserIdAndCompanyId(1L, 1L);
         assertNotNull(userStock);
 
         System.out.println("user_id: " + userStock.getUser().getId());
-        System.out.println("stock_id: " + userStock.getStock().getId());
+        System.out.println("stock_id: " + userStock.getCompany().getId());
         System.out.println("stock_count: " + userStock.getStockCount());
         System.out.println("total_price: " + userStock.getTotalPrice());
     }

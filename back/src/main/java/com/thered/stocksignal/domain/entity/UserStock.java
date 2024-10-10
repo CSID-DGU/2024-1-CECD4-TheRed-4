@@ -17,8 +17,8 @@ public class UserStock {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "stock_id", nullable = false)
-    private Stock stock;
+    @JoinColumn(name = "company_id", nullable = false)
+    private Company company;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

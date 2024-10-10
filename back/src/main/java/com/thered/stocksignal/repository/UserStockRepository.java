@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface UserStockRepository extends JpaRepository<UserStock, Long> {
-    @Query("SELECT us FROM UserStock us WHERE us.user.id = :userId AND us.stock.id = :stockId")
-    UserStock findByUserIdAndStockId(@Param("userId") Long userId, @Param("stockId") Long stockId);
+    @Query("SELECT us FROM UserStock us WHERE us.user.id = :userId AND us.company.id = :companyId")
+    UserStock findByUserIdAndCompanyId(@Param("userId") Long userId, @Param("companyId") Long companyId);
 }
 
