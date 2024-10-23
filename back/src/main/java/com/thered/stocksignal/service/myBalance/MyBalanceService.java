@@ -7,6 +7,6 @@ import static com.thered.stocksignal.app.dto.MyBalanceDto.*;
 public interface MyBalanceService {
 
     // 내 잔고 조회
-    Optional<MyBalanceResponseDto> getMyBalance(String accountNumber, String accessToken, String appKey, String appSecret);
+    Optional<MyBalanceResponseDto> getMyBalance(Long userId);
 
 }

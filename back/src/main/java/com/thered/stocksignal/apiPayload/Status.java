@@ -62,15 +62,29 @@ public enum Status {
     MYSTOCK_SUCCESS("200", "SUCCESS", "나의 전체 주식현황을 읽는데 성공했습니다."),
     MYSTOCK_SHORT_SUCCESS("200", "SUCCESS", "나의 주식현황 요약을 읽는데 성공했습니다."),
 
+    SCENARIO_FOUND("200", "SUCCESS", "시나리오 조회에 성공했습니다."),
+    SCENARIO_CREATED("200", "SUCCESS", "시나리오 생성에 성공했습니다."),
+    SCENARIO_DELETED("200", "SUCCESS", "시나리오가 삭제되었습니다."),
+
+    CONDITION_FOUND("200", "SUCCESS", "조건 조회에 성공하였습니다."),
+    CONDITION_ADDED("200", "SUCCESS", "조건 추가에 성공했습니다."),
+    CONDITION_DELETED("200", "SUCCESS", "조건 삭제에 성공했습니다."),
+
     //실패
     USER_NOT_FOUND("404", "FAILURE", "사용자를 찾을 수 없습니다"),
 
     COMPANY_NOT_FOUND("404", "FAILURE", "회사 정보를 찾을 수 없습니다"),
-    COMPANY_RANKING_FAILURE("400", "FAILURE", "인기 종목 조회에 실패했습니다."),
+    COMPANY_RANKING_FAILED("400", "FAILURE", "인기 종목 조회에 실패했습니다."),
 
     MY_BALANCE_NOT_FOUND("404", "FAILURE", "잔고 정보를 찾을 수 없습니다"),
 
-    NEWS_NOT_FOUND("404", "FAILURE", "뉴스 정보를 찾을 수 없습니다");
+    NEWS_NOT_FOUND("404", "FAILURE", "뉴스 정보를 찾을 수 없습니다"),
+
+    SCENARIO_CREATION_FAILED("400", "FAILURE", "시나리오 생성에 실패하였습니다."),
+    SCENARIO_DELETION_FAILED("400", "FAILURE", "시나리오 삭제에 실패하였습니다."),
+
+    ADDING_CONDITION_FAILED("400", "FAILURE", "조건 추가에 실패했습니다."),
+    DELETING_CONDITION_FAILED("400", "FAILURE", "조건 삭제에 실패했습니다.");
 
     private final String code;
     private final String result;

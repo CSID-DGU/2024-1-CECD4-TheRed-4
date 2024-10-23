@@ -76,3 +76,4 @@ out/
 *.xml
 !crawling_data.zip
 !data-importer-2023-12-20.zip
+back/src/test/java/com/thered/stocksignal/test/TokenTest.java

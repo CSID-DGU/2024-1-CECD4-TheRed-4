@@ -38,7 +38,7 @@ public class StockDto {
     // 주식 순위
     public static class popularStockResponseDto {
         private Integer rank;
-        private String stockName;
+        private String companyName;
     }
 
     @Getter

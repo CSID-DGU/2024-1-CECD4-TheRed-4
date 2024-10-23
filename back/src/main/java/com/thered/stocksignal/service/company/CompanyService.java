@@ -17,13 +17,13 @@ public interface CompanyService {
     Optional<CompanyLogoResponseDto> findLogoByName(String companyName);
 
     // 종목 코드 -> 회사 정보 (분석 탭에 들어갈 내용)
-    Optional<CompanyInfoResponseDto> findCompanyInfoByCode(String companyCode, String accessToken, String appKey, String appSecret);
+    Optional<CompanyInfoResponseDto> findCompanyInfoByCode(String companyCode, Long userId);
 
     // 종목 코드 -> 현재가 조회
-    Optional<CurrentPriceResponseDto> findCurrentPriceByCode(String companyCode, String accessToken, String appKey, String appSecret);
+    Optional<CurrentPriceResponseDto> findCurrentPriceByCode(String companyCode, Long userId);
 
     // 종목 코드 -> 일봉 조회
-    Optional<PeriodPriceResponseDto> findPeriodPriceByCode(String companyCode, String startDate, String endDate, String accessToken, String appKey, String appSecret);
+    Optional<PeriodPriceResponseDto> findPeriodPriceByCode(String companyCode, String startDate, String endDate, Long userId);
 
     // 인기 종목 10개 조회
     Optional<List<popularStockResponseDto>> getPopularStocks();

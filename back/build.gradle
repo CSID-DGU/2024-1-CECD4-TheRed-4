@@ -44,7 +44,7 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5' // JSON 파싱을 위해 Jackson 사용
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
-	//scrapping
+	// scrapping
 	implementation 'org.jsoup:jsoup:1.14.3'
 }
 

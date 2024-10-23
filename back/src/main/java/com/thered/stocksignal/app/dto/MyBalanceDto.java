@@ -14,6 +14,7 @@ public class MyBalanceDto {
     @Builder
     public static class StockResponseDto {
         private String stockName;  // 종목명
+        private String logoImage;  // 로고 이미지 경로
         private Long quantity;  // 보유 수량
         private Long avgPrice;  // 매입 평균가
         private Long currentPrice;  // 현재가
