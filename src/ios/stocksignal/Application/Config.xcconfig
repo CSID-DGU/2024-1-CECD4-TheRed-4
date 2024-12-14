@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  stocksignal
+//
+//  Created by 신예빈 on 11/14/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = c93bfd494630d7b92e90714929d816e3
